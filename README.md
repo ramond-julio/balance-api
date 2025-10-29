@@ -36,13 +36,13 @@ Balance API used for check inquiry balance and withdraw balance from user
 3. **Create the MySQL database:**
    - Open MySQL command line or a GUI tool and run:
      ```sql
-     CREATE DATABASE IF NOT EXISTS wallet_db;
+     CREATE DATABASE IF NOT EXISTS balance_db;
      ```
 
 4. **Run the schema SQL script:**
    - Save your schema in a file named `schema.sql` and run:
      ```bash
-     mysql -u root -p wallet_db < schema.sql
+     mysql -u root -p balance_db < schema.sql
      ```
 
 ## Configuration
@@ -62,7 +62,7 @@ Balance API used for check inquiry balance and withdraw balance from user
 
    func NewConfig() *Config {
        return &Config{
-           DBName:     "wallet_db",
+           DBName:     "balance_db",
            DBUser:     "root", // your MySQL username
            DBPassword: "your-password-here",
            DBHost:     "localhost",
